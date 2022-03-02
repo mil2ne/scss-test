@@ -1,15 +1,24 @@
-// 중첩
 // https://www.sassmeister.com/
-.container {
-  > ul {
-     li {
-       font-size: 40px;
-       .name {
-         color: royalblue;
-       }
-       .age {
-         color: orange;
-       }
-     }
-   }
- }
+// & - 상위 선택자 참조
+
+.btn {
+  position: absolute;
+  &.active {
+      color: red;
+  }
+}
+
+.list {
+  li {
+      &:last-child {
+          margin-right: 0;
+      }
+  }
+}
+
+.fs {
+  &-small { font-size: 12px; }
+  &-medium  { font-size: 14px; }
+  &-large { font-size: 16px; }
+  
+}
