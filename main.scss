@@ -1,24 +1,20 @@
+// 중첩된 속성
 // https://www.sassmeister.com/
-// & - 상위 선택자 참조
 
-.btn {
-  position: absolute;
-  &.active {
-      color: red;
-  }
-}
-
-.list {
-  li {
-      &:last-child {
-          margin-right: 0;
-      }
-  }
-}
-
-.fs {
-  &-small { font-size: 12px; }
-  &-medium  { font-size: 14px; }
-  &-large { font-size: 16px; }
-  
+.box {
+  font: {
+      weight: bold;
+      size: 10px;
+      family: sans-serif;
+  };
+  margin: {
+      top: 10px;
+      left: 20px;
+  };
+  padding: {
+      top: 10px;
+      bottom: 10px;
+      left: 20px;
+      right: 30px;
+  };
 }
