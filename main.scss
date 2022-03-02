@@ -1,20 +1,20 @@
-// 중첩된 속성
+// 변수
 // https://www.sassmeister.com/
 
+$size: 200px;
+
+.container {
+    position: fixed;
+    top: $size;
+    .item {
+        $size: 100px;
+        width: $size;
+        height: $size;
+        transform: translateX($size);
+    }
+    left: $size;
+}
+
 .box {
-  font: {
-      weight: bold;
-      size: 10px;
-      family: sans-serif;
-  };
-  margin: {
-      top: 10px;
-      left: 20px;
-  };
-  padding: {
-      top: 10px;
-      bottom: 10px;
-      left: 20px;
-      right: 30px;
-  };
+    width: $size;
 }
