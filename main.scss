@@ -1,37 +1,8 @@
-// mixin (재활용)
+// 반복문
 // https://www.sassmeister.com/
 
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container {
-  @include center;
-  .item {
-      @include center;
+@for $i from 1 through 10 {
+  .box:nth-child(#{$i}) {
+      width: 100px * $i;
   }
-}
-
-.box {
-  @include center;
-}
-
-
-@mixin box($size: 100px, $color: tomato) {
-  width: $size;
-  height: $size;
-  background-color: $color;
-}
-
-.container {
-  @include box(200px, red);
-  .item {
-      @include box($color: green);
-  }
-}
-
-.box {
-  @include box;
 }
