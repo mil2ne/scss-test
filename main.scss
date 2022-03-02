@@ -1,8 +1,19 @@
-// 반복문
+// 함수
 // https://www.sassmeister.com/
 
-@for $i from 1 through 10 {
-  .box:nth-child(#{$i}) {
-      width: 100px * $i;
-  }
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function ratio($size, $ratio) {
+  @return $size * $ratio
+}
+
+.box {
+  $width: 160;
+  width: $width;
+  height: ratio($width, 9/16);
+  @include center;
 }
