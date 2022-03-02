@@ -1,19 +1,39 @@
-// 함수
+// 색상 내장 함수
 // https://www.sassmeister.com/
 
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@function ratio($size, $ratio) {
-  @return $size * $ratio
-}
-
 .box {
-  $width: 160;
-  width: $width;
-  height: ratio($width, 9/16);
-  @include center;
+  $color: royalblue;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: $color;
+  &.built-1 {
+      background-color: mix($color, red);
+  }
+  &.built-2 {
+      background-color: lighten($color, 10%);
+  }
+  &.built-3 {
+      background-color: darken($color, 10%);
+  }
+  &:hover {
+      background-color: darken($color, 10%);
+  }
+  &.built-4 {
+      background-color: saturate($color, 40%);
+  }
+  &.built-5 {
+      background-color: desaturate($color, 40%);
+  }
+  &.built-6 {
+      background-color: grayscale($color);
+  }
+  &.built-7 {
+      background-color: invert($color);
+  }
+  &.built-8 {
+      background-color: rgba($color, .5);
+  }
+  
 }
