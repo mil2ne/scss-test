@@ -1,7 +1,15 @@
-$color: royalblue;
-
+// 중첩
+// https://www.sassmeister.com/
 .container {
-  h1 {
-    color: $color;
-  }
-}
+  > ul {
+     li {
+       font-size: 40px;
+       .name {
+         color: royalblue;
+       }
+       .age {
+         color: orange;
+       }
+     }
+   }
+ }
