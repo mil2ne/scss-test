@@ -1,39 +1,9 @@
-// 색상 내장 함수
-// https://www.sassmeister.com/
+@import "./sub", "./sub2";
 
-.box {
-  $color: royalblue;
-  width: 200px;
-  height: 100px;
-  margin: 20px;
-  border-radius: 10px;
-  background-color: $color;
-  &.built-1 {
-      background-color: mix($color, red);
+$color: royalblue;
+
+.container {
+  h1 {
+    color: $color;
   }
-  &.built-2 {
-      background-color: lighten($color, 10%);
-  }
-  &.built-3 {
-      background-color: darken($color, 10%);
-  }
-  &:hover {
-      background-color: darken($color, 10%);
-  }
-  &.built-4 {
-      background-color: saturate($color, 40%);
-  }
-  &.built-5 {
-      background-color: desaturate($color, 40%);
-  }
-  &.built-6 {
-      background-color: grayscale($color);
-  }
-  &.built-7 {
-      background-color: invert($color);
-  }
-  &.built-8 {
-      background-color: rgba($color, .5);
-  }
-  
 }
