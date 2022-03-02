@@ -1,20 +1,25 @@
-// 변수
+// 산술연산
 // https://www.sassmeister.com/
 
-$size: 200px;
-
-.container {
-    position: fixed;
-    top: $size;
-    .item {
-        $size: 100px;
-        width: $size;
-        height: $size;
-        transform: translateX($size);
-    }
-    left: $size;
+div {
+  $size: 30px;
+  width: 20px + 20px;
+  height: 40px - 10px;
+  font-size: (30px / 2);
+  margin: 10px * 2;
+  margin: $size / 2;
+  margin: 10px + 12px / 2;
+  padding: 20px % 7;
+  
 }
 
-.box {
-    width: $size;
+span {
+  font-size: 10px;
+  line-height: 10px;
+  font-family: serif;
+  font: 10px / 10px serif;
+}
+
+div {
+  width: calc(100% - 200px);
 }
