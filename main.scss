@@ -1,26 +1,25 @@
-// each 반복
+// mixin content
 // https://www.sassmeister.com/
 
-$number: 1; // .5, 100px, 1em
-$string: bold; // relative, "../images/a.png"
-$color: red; // blue, #ffff00, rgba(0,0,0,.1)
-$boolean: true; // false
-$null: null;
-$list: orange, royalblue, yellow;
-$map: (
-    o: orange,
-    r: royalblue,
-    y: yellow
-);
-
-@each $c in $list {
-    .box {
-        color: $c;
-    }
+@mixin left-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  @content;
 }
 
-@each $k, $v in $map {
-    .box-#{$k} {
-        color: $v;
-    }
+.container {
+  width: 100px;
+  height: 100px;
+  @include left-top;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  @include left-top {
+      bottom: 0;
+      right: 0;
+      margin: auto;
+  }
 }
