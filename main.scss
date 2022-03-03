@@ -1,9 +1,20 @@
-@import "./sub", "./sub2";
+// 데이터 종류
+// https://www.sassmeister.com/
 
-$color: royalblue;
+$number: 1; // .5, 100px, 1em
+$string: bold; // relative, "../images/a.png"
+$color: red; // blue, #ffff00, rgba(0,0,0,.1)
+$boolean: true; // false
+$null: null;
+$list: orange, royalblue, yellow;
+$map: (
+    o: orange,
+    r: royalblue,
+    y: yellow
+);
 
-.container {
-  h1 {
-    color: $color;
-  }
+.box {
+    width: 100px;
+    color: red;
+    position: relative;
 }
