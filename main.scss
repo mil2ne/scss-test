@@ -1,4 +1,4 @@
-// 데이터 종류
+// each 반복
 // https://www.sassmeister.com/
 
 $number: 1; // .5, 100px, 1em
@@ -13,8 +13,14 @@ $map: (
     y: yellow
 );
 
-.box {
-    width: 100px;
-    color: red;
-    position: relative;
+@each $c in $list {
+    .box {
+        color: $c;
+    }
+}
+
+@each $k, $v in $map {
+    .box-#{$k} {
+        color: $v;
+    }
 }
